@@ -77,6 +77,14 @@ div.required .control-label:before {
 	background-image: linear-gradient(to bottom, #23a1d1, #1f90bb);
 	background-repeat: repeat-x;
 }
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1800px;
+	width:100%;
+  }
+}
+
 /* top */
 #top {
 	padding:9px 0;
@@ -103,9 +111,15 @@ width: 100%;
 
 }
 /* logo */
-#logo {
-	margin: 0 0 10px 0;
+.logo-block {
+	margin: 0 10px 0px 0;
+
 }
+.header-left {
+  display: flex;
+}
+
+
 /* search */
 #search {
 	margin-bottom: 10px;
