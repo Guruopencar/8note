@@ -96,6 +96,7 @@ background: rgb(248, 248, 248);
 }
 
 
+
 .promo-top {
 
 color: rgb(1, 1, 1);
@@ -110,6 +111,28 @@ width: 100%;
   display: inline-block;
 
 }
+
+.all-header{
+	display: flex;
+}
+
+
+.header-right {
+  width: 100%;
+  max-width: 25%;
+}
+
+.header-center {
+  max-width: 50%;
+  width: 100%;
+}
+
+.header-left {
+  display: flex;
+  max-width: 25%;
+  width: 100%;
+}
+
 /* logo */
 .logo-block {
 	margin: 0 10px 0px 0;
@@ -119,21 +142,96 @@ width: 100%;
   display: flex;
 }
 
+/* menu-header*/
+
+.header-menu{
+	list-style: none;
+  margin: 0;
+  padding: 0;
+	
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom:20px;
+}
+
+
+.header-menu li{float:left;}
+.header-menu li a{
+color: rgb(101, 101, 101);
+font-family: Fira Sans;
+font-size: 14px;
+font-weight: 500;
+line-height: 17px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+	padding-right:15px;
+}
+.header-menu li a.red{
+	color: rgb(230, 12, 11);
+	
+}
+
+
+/* каталог */
+
+.btn-manu{
+	border-radius: 5px;
+background: rgb(230, 12, 11);
+	width:132px;
+	margin-right:20px;
+
+color: rgb(255, 255, 255);
+
+font-size: 18px;
+font-weight: 400;
+line-height: 22px;
+letter-spacing: -2%;
+padding: 12px 14px;
+display:inline-block;
+text-transform: uppercase;
+	
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom:20px;
+}
+
+.header-bottom-right {
+  width: 100%;
+}
+
+.header-bottom-left {
+  max-width: 152px;
+}
+
+
 
 /* search */
 #search {
-	margin-bottom: 10px;
+	width: 100%;
+	position: relative;
 }
 #search .input-lg {
-	height: 40px;
-	line-height: 20px;
-	padding: 0 10px;
+	height: 46px;
+  line-height: 20px;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  border: 1px solid rgb(101, 101, 101);
+  border-radius: 5px;
+  font-size:14px;
 }
-#search .btn-lg {
-	font-size: 15px;
-	line-height: 18px;
-	padding: 10px 35px;
-	text-shadow: 0 1px 0 #FFF;
+#search .btn-search {
+	border:none;
+	z-index: 2;
+	background:none;
+	position:absolute;
+	right:16px;
+	top:15px;
 }
 /* cart */
 #cart {
