@@ -4,7 +4,7 @@
 
 // Text
 $_['text_home']          = 'Главная';
-$_['text_wishlist']      = 'Закладки (%s)';
+$_['text_wishlist']      = '%s';
 $_['text_shopping_cart'] = 'Корзина';
 $_['text_category']      = 'Категории';
 $_['text_account']       = 'Личный кабинет';
@@ -27,3 +27,5 @@ $_['text_menu_7'] = 'акции';
 $_['text_menu_8'] = 'новые товары';
 $_['text_menu_9'] = 'бренды';
 $_['text_menu_10'] = 'блог';
+
+$_['text_call'] = 'Заказать звонок';

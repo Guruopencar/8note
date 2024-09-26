@@ -120,6 +120,8 @@ width: 100%;
 .header-right {
   width: 100%;
   max-width: 25%;
+  display: flex;
+  justify-content: end;
 }
 
 .header-center {
@@ -209,7 +211,16 @@ text-transform: uppercase;
   max-width: 152px;
 }
 
+.left-info .header-top-left {
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+}
 
+.left-info .header-top-right {
+  display: flex;
+  align-items: center;
+}
 
 /* search */
 #search {
@@ -233,6 +244,128 @@ text-transform: uppercase;
 	right:16px;
 	top:15px;
 }
+
+.btn-call {
+  color: rgb(1, 1, 1);
+  font-family: Fira Sans;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.btn-phone{
+	/* tags */
+color: rgb(1, 1, 1);
+font-family: Fira Sans;
+font-size: 14px;
+font-weight: 500;
+line-height: 17px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+}
+
+.btn-viber{
+	margin:0 8px;
+}
+
+
+.header-bottom-right {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lang-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lang-menu li {
+  float: left;
+}
+
+.lang-menu button{
+	padding:0;
+	/* menu points */
+color: rgb(51, 51, 51);
+font-family: Fira Sans;
+font-size: 18px;
+font-weight: 400;
+line-height: 22px;
+letter-spacing: -2%;
+text-align: left;
+text-transform: uppercase;
+}
+
+
+.lang-menu li {
+  position: relative;
+padding: 0 7px;
+}
+
+li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px; /* Висота лінії */
+  width: 1px;
+  background-color: #000; /* Колір лінії */
+}
+
+.header-lang-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-top.left-info {
+  margin-bottom: 40px;
+}
+
+
+.header-icones {
+  position: relative;
+}
+
+.header-icones span{color: rgb(255, 255, 255);
+font-family: Fira Sans;
+font-size: 8px;
+font-weight: 400;
+line-height: 130%;
+letter-spacing: 0%;
+background: rgb(230, 12, 11);
+border-radius:100%;
+text-align:center;
+
+position:absolute;
+top: -2px;
+  right: -5px;
+display: block;
+  width: 10px;
+  height: 10px;
+}
+
+
+.header-cart-right {
+  display: flex;
+  align-items: baseline;
+}
+
+.header-icones {
+  display: block;
+  width: 24px;
+  text-align: center;
+  margin: 0 7px;
+  height: 24px;
+}
+
+
 /* cart */
 #cart {
 	margin-bottom: 10px;

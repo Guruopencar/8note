@@ -2,7 +2,7 @@
 
 // Text
 $_['text_home']          = 'Головна';
-$_['text_wishlist']      = 'Закладки (%s)';
+$_['text_wishlist']      = '%s';
 $_['text_shopping_cart'] = 'Кошик';
 $_['text_category']      = 'Категорії';
 $_['text_account']       = 'Особистий кабінет';
@@ -26,6 +26,10 @@ $_['text_menu_7']        = 'акції';
 $_['text_menu_8']        = 'нові товари';
 $_['text_menu_9']        = 'бренди';
 $_['text_menu_10']        = 'блог';
+
+
+
+$_['text_call']        = 'Замовити дзвінок';
 
 
 

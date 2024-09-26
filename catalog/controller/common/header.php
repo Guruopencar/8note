@@ -40,6 +40,7 @@ class ControllerCommonHeader extends Controller {
 		$data['direction'] = $this->language->get('direction');
 		$data['address'] = nl2br($this->config->get('config_address'));
 			$data['open'] = nl2br($this->config->get('config_open'));
+			$data['phone'] = $this->config->get('config_telephone');
 
 		$data['name'] = $this->config->get('config_name');
 
