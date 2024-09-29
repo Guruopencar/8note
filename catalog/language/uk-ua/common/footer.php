@@ -18,4 +18,4 @@ $_['text_account']      = 'Особистий кабінет';
 $_['text_order']        = 'Історія замовлень';
 $_['text_wishlist']     = 'Закладки';
 $_['text_newsletter']   = 'Розсилка';
-$_['text_powered']      = '%s &copy; %s';
+$_['text_powered']      = 'Copyright©2005-2024 8nota.com.ua - 8 НОТА';

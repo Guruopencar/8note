@@ -538,11 +538,9 @@ display: block;
 }
 /* footer */
 footer {
-	margin-top: 30px;
-	padding-top: 30px;
-	background-color: #303030;
-	border-top: 1px solid #ddd;
-	color: #e2e2e2;
+	padding: 20px 0;
+	border-radius: 10px 10px 0px 0px;
+  background: rgb(51, 51, 51);
 }
 footer hr {
 	border-top: none;
@@ -560,6 +558,18 @@ footer h5 {
 	font-weight: bold;
 	color: #fff;
 }
+.powered{
+	
+color: rgb(255, 255, 255);
+font-family: Fira Sans;
+font-size: 12px;
+font-weight: 400;
+line-height: 14px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+}
+
 /* alert */
 .alert {
 	padding: 8px 14px 8px 14px;
