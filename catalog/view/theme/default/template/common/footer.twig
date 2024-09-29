@@ -1,45 +1,104 @@
 <footer>
   <div class="container">
     <div class="row">
+	<div class="all-footer">
       {% if informations %}
-      <div class="col-sm-3">
+       <div class="col-foot-5">
 	  <div class="logo-footer">
 		<img src="image/logo_f.png" alt="" title="" />
 	  </div>
         
-        <!-- <ul class="list-unstyled"> -->
-         <!-- {% for information in informations %} -->
-          <!-- <li><a href="{{ information.href }}">{{ information.title }}</a></li> -->
-          <!-- {% endfor %} -->
-        <!-- </ul> -->
+        
       </div>
       {% endif %}
-      <div class="col-sm-3">
-        <h5>{{ text_service }}</h5>
+       <div class="col-foot-5">
+        <h5>{{ text_information }}</h5>
         <ul class="list-unstyled">
+		{% for information in informations %}
+			<li><a href="{{ information.href }}">{{ information.title }}</a></li>
+		{% endfor %}
           <li><a href="{{ contact }}">{{ text_contact }}</a></li>
-          <li><a href="{{ return }}">{{ text_return }}</a></li>
+         
           <li><a href="{{ sitemap }}">{{ text_sitemap }}</a></li>
         </ul>
       </div>
-      <div class="col-sm-3">
+       <div class="col-foot-5">
         <h5>{{ text_extra }}</h5>
         <ul class="list-unstyled">
-          <li><a href="{{ manufacturer }}">{{ text_manufacturer }}</a></li>
-          <li><a href="{{ voucher }}">{{ text_voucher }}</a></li>
-          <li><a href="{{ affiliate }}">{{ text_affiliate }}</a></li>
-          <li><a href="{{ special }}">{{ text_special }}</a></li>
+		  <li><a href="{{ account }}">{{ text_enter }}</a></li>
+         
+          <li><a href="{{ voucher }}">{{ text_regis }}</a></li>
+          <li><a href="{{ affiliate }}">{{ text_f_menu_6 }}</a></li>
+          <li><a href="{{ affiliate }}">{{ text_f_menu_7 }}</a></li>
+          <li><a href="{{ affiliate }}">{{ text_f_menu_8 }}</a></li>
+		  
+		  
+          <li><div class="social-foot">{{ text_social }}</div>
+		  
+		  <a href=""><img src="image/in.svg" alt="" title="" /></a>
+		  <a href=""><img src="image/ti.svg" alt="" title="" /></a>
+		  <a href=""><img src="image/fa.svg" alt="" title="" /></a>
+
+		  
+		  </li>
+        
         </ul>
       </div>
-      <div class="col-sm-3">
-        <h5>{{ text_account }}</h5>
+       <div class="col-foot-5">
+        <h5>{{ text_service }}</h5>
         <ul class="list-unstyled">
-          <li><a href="{{ account }}">{{ text_account }}</a></li>
-          <li><a href="{{ order }}">{{ text_order }}</a></li>
-          <li><a href="{{ wishlist }}">{{ text_wishlist }}</a></li>
-          <li><a href="{{ newsletter }}">{{ text_newsletter }}</a></li>
+		   <li><a class="red" href="{{ special }}">{{ text_f_menu_1 }}</a></li>
+		   <li><a  href="{{ special }}">{{ text_special }}</a></li>
+		   <li><a  href="{{ special }}">{{ text_f_menu_2 }}</a></li>
+		   <li><a  href="{{ special }}">{{ text_f_menu_3 }}</a></li>
+		    <li><a href="{{ manufacturer }}">{{ text_manufacturer }}</a></li>
+		   <li><a  href="{{ special }}">{{ text_f_menu_5 }}</a></li>
+         
+		  
+		  
+		  
+         
         </ul>
       </div>
+	  
+	  <div class="col-foot-5">
+        <h5>{{ text_contact }}</h5>
+        <div class="footer-cont">
+			<div class="adressa">{{ address }}</div>
+			<div class="adressa">{{ open }}</div>
+			<div class="adressa"><a href="tel:{{ phone }}" title="">{{ phone }} <a class="btn-viber" href="tel:+38{{ phone }}" title=""><svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="FFFFFF" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	
+	<defs>
+		<clipPath id="clip408_9565">
+			<rect id="icons8-viber 1" rx="-0.500000" width="19.000000" height="19.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="icons8-viber 1" rx="-0.500000" width="19.000000" height="19.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip408_9565)">
+		<path id="Vector" d="M9.77 1.2C9.22 1.2 8.67 1.23 8.12 1.3C7.07 1.43 6.02 1.64 5.02 2.1C3.42 2.84 2.29 4.08 1.96 5.89C1.82 6.65 1.71 7.42 1.65 8.2C1.52 9.71 1.6 11.23 2.03 12.72C2.37 13.89 2.99 14.95 4.08 15.63C4.54 15.92 5.15 16.06 5.46 16.21C5.55 16.25 5.57 16.27 5.58 16.28C5.58 16.29 5.6 16.3 5.6 16.39C5.58 17.35 5.6 19.2 5.6 19.2L5.6 19.6L6.31 19.6L6.43 19.48C6.43 19.48 8.24 17.74 8.9 17.02C9.02 16.89 9.08 16.82 9.09 16.81C9.1 16.8 9.08 16.8 9.2 16.8C10.06 16.78 10.92 16.75 11.78 16.7C12.92 16.64 14.07 16.53 15.18 16.06C16.15 15.66 16.96 15 17.45 14.01C17.95 12.99 18.21 11.92 18.31 10.8C18.48 8.95 18.42 7.09 17.91 5.26C17.61 4.18 17 3.28 16.07 2.64C14.96 1.87 13.7 1.58 12.47 1.4C11.76 1.29 11.04 1.22 10.31 1.2C10.13 1.2 9.95 1.19 9.77 1.2ZM10.29 2C10.98 2.02 11.67 2.09 12.36 2.19C13.54 2.37 14.66 2.64 15.62 3.3C16.39 3.83 16.88 4.55 17.14 5.47C17.62 7.18 17.68 8.94 17.52 10.73C17.42 11.76 17.18 12.74 16.73 13.65C16.33 14.46 15.71 14.98 14.87 15.33C13.9 15.73 12.85 15.84 11.74 15.9C10.89 15.95 10.04 15.98 9.19 16C8.97 16 8.76 16.06 8.62 16.17C8.47 16.27 8.4 16.38 8.31 16.48C7.84 16.99 6.9 17.89 6.4 18.38C6.39 17.79 6.39 17.07 6.4 16.4C6.4 16.2 6.35 15.99 6.23 15.82C6.12 15.65 5.96 15.55 5.8 15.48C5.35 15.27 4.76 15.11 4.5 14.95C3.61 14.39 3.1 13.55 2.8 12.5C2.4 11.12 2.33 9.71 2.45 8.27C2.51 7.52 2.62 6.77 2.75 6.03C3.04 4.47 3.93 3.48 5.35 2.83C6.25 2.42 7.21 2.22 8.22 2.09C8.91 2.01 9.6 1.98 10.29 2ZM10.46 4C10.13 4 9.81 4.03 9.5 4.1C9.28 4.15 9.15 4.37 9.2 4.58C9.24 4.8 9.46 4.93 9.67 4.88C9.93 4.82 10.19 4.8 10.46 4.8C12.41 4.8 13.99 6.37 13.99 8.32C13.99 8.59 13.96 8.85 13.9 9.11C13.85 9.32 13.98 9.54 14.2 9.59C14.42 9.63 14.63 9.5 14.68 9.28C14.75 8.97 14.79 8.65 14.79 8.32C14.79 5.94 12.84 4 10.46 4ZM6.47 4.8C6.4 4.79 6.33 4.8 6.26 4.81C5.54 4.97 4.82 5.5 4.8 6.44C4.82 6.57 4.81 6.71 4.86 6.83C5.1 7.41 5.31 8.01 5.6 8.56C7.05 11.24 9.23 13.09 12.02 14.27C12.35 14.41 12.7 14.44 13.03 14.3C13.5 14.11 13.89 13.81 14.15 13.39C14.51 12.8 14.51 12.39 13.92 11.96C13.54 11.68 13.16 11.39 12.77 11.11C12.17 10.69 11.53 10.61 11.08 11.35C11.06 11.39 11.02 11.42 11 11.45C10.77 11.7 10.49 11.75 10.19 11.63C9.06 11.17 8.19 10.42 7.67 9.31C7.36 8.65 7.44 8.32 8.02 7.89C8.08 7.85 8.13 7.8 8.19 7.75C8.44 7.52 8.51 7.25 8.36 6.93C8.02 6.22 7.57 5.59 7 5.05C6.84 4.9 6.66 4.81 6.47 4.8ZM10.45 5.2C10.27 5.2 10.1 5.21 9.93 5.24C9.78 5.26 9.66 5.35 9.61 5.49C9.55 5.63 9.58 5.78 9.67 5.89C9.77 6.01 9.92 6.06 10.06 6.03C10.19 6.01 10.32 6 10.45 6C11.75 6 12.8 7.04 12.8 8.34C12.8 8.47 12.78 8.6 12.76 8.73C12.73 8.87 12.78 9.02 12.9 9.12C13.01 9.21 13.16 9.24 13.3 9.18C13.44 9.13 13.53 9.01 13.55 8.86C13.58 8.69 13.6 8.52 13.6 8.34C13.6 6.61 12.18 5.2 10.45 5.2ZM10.4 6.39C10.25 6.39 10.12 6.47 10.04 6.59C9.97 6.72 9.97 6.87 10.04 7C10.12 7.12 10.25 7.2 10.4 7.2C11.06 7.2 11.6 7.73 11.6 8.39C11.59 8.54 11.67 8.67 11.79 8.75C11.92 8.82 12.07 8.82 12.2 8.75C12.32 8.67 12.4 8.54 12.4 8.39C12.4 7.3 11.5 6.39 10.4 6.39Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>
+</a>
+					<a class="btn-telg" href="tel:+38{{ phone }}" title=""><svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	
+	<defs>
+		<clipPath id="clip408_9567">
+			<rect id="icons8-telegram 1" rx="-0.500000" width="19.000000" height="19.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="icons8-telegram 1" rx="-0.500000" width="19.000000" height="19.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip408_9567)">
+		<path id="Vector" d="M10 0.79C4.92 0.79 0.8 4.92 0.8 10C0.8 15.07 4.92 19.19 10 19.19C15.07 19.19 19.2 15.07 19.2 10C19.2 4.92 15.07 0.79 10 0.79ZM10 1.59C14.64 1.59 18.4 5.35 18.4 10C18.4 14.64 14.64 18.39 10 18.39C5.35 18.39 1.6 14.64 1.6 10C1.6 5.35 5.35 1.59 10 1.59ZM13.63 5.61C13.36 5.61 13.05 5.67 12.69 5.8C12.13 6 5.56 8.79 4.82 9.11C4.39 9.29 3.59 9.63 3.59 10.43C3.59 10.97 3.91 11.35 4.52 11.57C4.85 11.69 5.64 11.93 6.1 12.05C6.29 12.1 6.5 12.13 6.71 12.13C7.12 12.13 7.54 12.03 7.87 11.85C7.86 11.91 7.86 11.98 7.87 12.05C7.92 12.47 8.18 12.87 8.56 13.11C8.82 13.27 10.87 14.64 11.17 14.86C11.6 15.17 12.08 15.33 12.55 15.33C13.44 15.33 13.75 14.4 13.89 13.96C14.1 13.31 14.89 8.07 14.98 7.14C15.04 6.51 14.77 5.99 14.27 5.75C14.08 5.65 13.86 5.61 13.63 5.61ZM13.63 6.41C13.74 6.41 13.84 6.43 13.92 6.47C14.11 6.56 14.21 6.76 14.18 7.07C14.08 8.08 13.3 13.2 13.13 13.71C12.99 14.15 12.84 14.53 12.55 14.53C12.26 14.53 11.95 14.43 11.64 14.21C11.33 13.99 9.28 12.61 8.99 12.43C8.74 12.27 8.48 11.88 8.85 11.5C9.16 11.19 11.48 8.93 11.68 8.73C11.83 8.58 11.76 8.4 11.62 8.4C11.57 8.4 11.51 8.42 11.44 8.47C11.2 8.67 7.81 10.94 7.52 11.12C7.32 11.24 7.02 11.33 6.71 11.33C6.58 11.33 6.44 11.32 6.31 11.28C5.86 11.16 5.1 10.92 4.79 10.82C4.5 10.71 4.4 10.61 4.4 10.43C4.4 10.18 4.75 10.01 5.13 9.84C5.53 9.68 12.42 6.75 12.96 6.55C13.21 6.46 13.44 6.41 13.63 6.41Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>
+</a></div>
+			<div class="adressa"><a href="tel:{{ phone_1 }}" title="">{{ phone_1 }}</a></div>
+			<div class="adressa"><a href="tel:{{ phone_2 }}" title="">{{ phone_2 }}</a></div>
+			<div class="adressa"><a href="mailto:{{ mail }}" title="">{{ mail }}</a></div>
+		
+		</div>
+      </div>
+    </div>
     </div>
     
     <p class="powered">{{ powered }}</p>

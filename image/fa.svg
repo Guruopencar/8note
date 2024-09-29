@@ -1,0 +1,14 @@
+<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip15_21320">
+			<rect id="facebook-svgrepo-com (1) 1" rx="-0.500000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="facebook-svgrepo-com (1) 1" rx="-0.500000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip15_21320)">
+		<path id="Vector" d="M20 1C21.65 1 23 2.34 23 4L23 20C23 21.65 21.65 23 20 23L4 23C2.34 23 1 21.65 1 20L1 4C1 2.34 2.34 1 4 1L20 1ZM20 3C20.55 3 21 3.44 21 4L21 20C21 20.55 20.55 21 20 21L15 21L15 14L17.07 14C17.5 14 17.88 13.72 18.02 13.31L18.46 11.98C18.62 11.5 18.26 11 17.75 11L15 11L15 9C15 8.5 15.5 8 16 8L18 8C18.55 8 19 7.55 19 7L19 6.31C19 5.99 18.79 5.7 18.48 5.61C17.17 5.27 16 5.27 16 5.27C13.5 5.27 12 7 12 8.5L12 11L10 11C9.44 11 9 11.44 9 12L9 13C9 13.55 9.44 14 10 14L12 14L12 21L4 21C3.44 21 3 20.55 3 20L3 4C3 3.44 3.44 3 4 3L20 3Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+	</g>
+</svg>
