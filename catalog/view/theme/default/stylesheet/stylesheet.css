@@ -1,4 +1,5 @@
 body {
+	font-family: 'Fira Sans';
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 140%;
@@ -100,7 +101,7 @@ background: rgb(248, 248, 248);
 .promo-top {
 
 color: rgb(1, 1, 1);
-font-family: Fira Sans;
+font-family: 'Fira Sans';
 font-size: 18px;
 font-weight: 400;
 line-height: 22px;
@@ -162,7 +163,7 @@ width: 100%;
 .header-menu li{float:left;}
 .header-menu li a{
 color: rgb(101, 101, 101);
-font-family: Fira Sans;
+font-family: 'Fira Sans';
 font-size: 14px;
 font-weight: 500;
 line-height: 17px;
@@ -247,7 +248,7 @@ text-transform: uppercase;
 
 .btn-call {
   color: rgb(1, 1, 1);
-  font-family: Fira Sans;
+  font-family: 'Fira Sans';
   font-size: 12px;
   font-weight: 400;
   line-height: 14px;
@@ -259,7 +260,7 @@ text-transform: uppercase;
 .btn-phone{
 	/* tags */
 color: rgb(1, 1, 1);
-font-family: Fira Sans;
+font-family: 'Fira Sans';
 font-size: 14px;
 font-weight: 500;
 line-height: 17px;
@@ -293,7 +294,7 @@ text-transform: uppercase;
 	padding:0;
 	/* menu points */
 color: rgb(51, 51, 51);
-font-family: Fira Sans;
+font-family: 'Fira Sans';
 font-size: 18px;
 font-weight: 400;
 line-height: 22px;
@@ -334,7 +335,7 @@ li:not(:last-child)::after {
 }
 
 .header-icones span{color: rgb(255, 255, 255);
-font-family: Fira Sans;
+font-family: 'Fira Sans';
 font-size: 8px;
 font-weight: 400;
 line-height: 130%;
@@ -542,10 +543,7 @@ footer {
 	border-radius: 10px 10px 0px 0px;
   background: rgb(51, 51, 51);
 }
-footer hr {
-	border-top: none;
-	border-bottom: 1px solid #666;
-}
+
 footer a {
 	color: #ccc;
 }
@@ -553,15 +551,19 @@ footer a:hover {
 	color: #fff;
 }
 footer h5 {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 13px;
-	font-weight: bold;
-	color: #fff;
+	
+color: rgb(248, 248, 248);
+
+font-size: 20px;
+font-weight: 500;
+line-height: 130%;
+letter-spacing: -2%;
+text-align: left;
 }
 .powered{
 	
 color: rgb(255, 255, 255);
-font-family: Fira Sans;
+
 font-size: 12px;
 font-weight: 400;
 line-height: 14px;
