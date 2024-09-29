@@ -539,7 +539,8 @@ display: block;
 }
 /* footer */
 footer {
-	padding: 20px 0;
+	margin-top:100px;
+	padding:20px 0;
 	border-radius: 10px 10px 0px 0px;
   background: rgb(51, 51, 51);
 }
@@ -1024,7 +1025,8 @@ h2.price {
 }
 
 .footer-cont{
-	 font-family: 'Fira Sans';color: rgb(248, 248, 248);
+	
+	 color: rgb(248, 248, 248);
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
@@ -1038,12 +1040,116 @@ h2.price {
 
 
 .foot-tit-pay {
-	/* description characteristics/14/reg */
+
 color: rgb(248, 248, 248);
 margin:70px 0 20px 0;
 font-size: 16px;
 font-weight: 400;
 line-height: 19px;
 letter-spacing: 0%;
+text-align: left; 
+}
+
+
+.about-home{
+	margin-top:100px;
+}
+
+.about-home h3{
+padding:30px 0 20px 0;
+color: rgb(51, 51, 51);
+font-size: 28px;
+font-weight: 600;
+line-height: 34px;
 text-align: left;
+}
+
+
+.all-perfer{
+	  display: flex;
+  justify-content: space-between;
+  margin-bottom:30px;
+	
+}
+
+.item-perfer{
+	box-sizing: border-box;
+border: 1px solid rgb(246, 238, 238);
+border-radius: 5px;
+padding: 10px 20px 10px 20px;
+background: rgb(255, 255, 255);
+max-width:235px;
+}
+
+.img-perfer{
+	margin-bottom:10px;
+}
+
+.text-perfer{
+color: rgb(51, 51, 51);
+font-size: 16px;
+font-weight: 500;
+line-height: 130%;
+letter-spacing: 0%;
+text-align: left;
+}
+
+
+
+
+.sl-mail{
+	box-sizing: border-box;
+border: 1px solid rgb(230, 12, 11);
+border-radius: 5px;
+width: 100%;
+  padding:10px 20px;
+}
+
+
+
+.all-sletter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  max-width: 1342px;
+  box-sizing: border-box;
+  border: 1px solid rgb(246, 238, 238);
+  border-radius: 10px;
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  align-items:center;
+}
+
+.text-sletter{
+color: rgb(51, 51, 51);
+max-width:610px;
+font-size: 20px;
+font-weight: 500;
+line-height: 130%;
+
+text-align: left;
+}
+
+.form-sletter {
+  width: 100%;
+  max-width: 610px;
+  position:relative
+}
+
+
+.sl-btn {
+  position: absolute;
+  right: 0;
+  border-radius: 5px;
+color: rgb(255, 255, 255);
+font-size: 18px;
+font-weight: 400;
+line-height: 22px;
+letter-spacing: -2%;
+text-align: left;
+text-transform: uppercase;
+background: rgb(230, 12, 11);
+border: 1px solid rgb(230, 12, 11);
+  padding: 12px 25px 11px;
+
 }

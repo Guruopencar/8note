@@ -1,0 +1,14 @@
+<svg width="36.000000" height="36.000000" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip540_12356">
+			<rect id="rock-svgrepo-com 1" rx="-0.500000" width="35.000000" height="35.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="rock-svgrepo-com 1" rx="-0.500000" width="35.000000" height="35.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip540_12356)">
+		<path id="Vector" d="M30.48 7.87L31.5 6.75L29.25 4.5L28.12 5.51L28.12 3.37L25.87 3.37L25.87 5.62L28 5.62L25.87 7.53L25.87 5.62L23.62 5.62L23.62 7.87L25.5 7.87L19.38 13.29L2.25 20.63L2.25 24.6L10.25 25.74L11.39 33.75L15.36 33.75L22.7 16.61L28.12 10.49L28.12 12.37L30.37 12.37L30.37 10.12L28.46 10.12L30.37 7.99L30.37 10.12L32.62 10.12L32.62 7.87L30.48 7.87ZM13.88 31.5L13.35 31.5L12.24 23.75L4.5 22.64L4.5 22.11L18.86 15.95L20.03 17.13L13.88 31.5ZM12.37 19.78L16.21 23.62L14.62 25.21L10.78 21.37L12.37 19.78Z" fill="#E60C0B" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>
