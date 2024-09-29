@@ -28,6 +28,15 @@ class ControllerCommonFooter extends Controller {
 		$data['order'] = $this->url->link('account/order', '', true);
 		$data['wishlist'] = $this->url->link('account/wishlist', '', true);
 		$data['newsletter'] = $this->url->link('account/newsletter', '', true);
+		if ($this->customer->isLogged()) {
+		$data['logged'] = $this->customer->isLogged();
+		}else{
+		$data['logged'] =$this->url->link('account/account', '', true);
+		}
+		$data['register'] = $this->url->link('account/register', '', true);
+		$data['compare'] = $this->url->link('product/compare');
+		$data['oferta'] = $this->url->link('information/information', 'information_id=5');
+		$data['konfir'] = $this->url->link('information/information', 'information_id=3');
 		
 				$data['address'] = nl2br($this->config->get('config_address'));
 			$data['open'] = nl2br($this->config->get('config_open'));
