@@ -1,0 +1,198 @@
+<modification>
+    <name>Newsletter Subscription_install</name>
+    <version>1</version>
+    <link>https://8nota.ua</link>
+    <author>8nota.ua</author>
+    <code>newsletter_subscription_install</code>
+    <file path="admin/controller/common/column_left.php">
+        <operation>
+            <search><![CDATA[
+               if ($this->user->hasPermission('access', 'marketing/contact')) {
+            ]]></search>
+            <add position="before"><![CDATA[
+                if ($this->user->hasPermission('access', 'common/newsletter')) {       
+                    $marketing[] = array(
+                        'name'     => 'Подписчики',
+                        'href'     => $this->url->link('common/newsletter', 'user_token=' . $this->session->data['user_token'], true),
+                        'children' => array()       
+                    );                  
+                }   
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="admin/view/template/marketing/contact.twig">
+            <operation>
+                <search><![CDATA[<option value="product">{{ text_product }}</option>]]></search>
+                <add position="after">
+                <![CDATA[
+                    <option value="only_newsletter">{{ text_only_newsletter }}</option>
+                ]]>
+                </add>
+            </operation>
+        </file>
+        
+        <file path="admin/language/en-gb/marketing/contact.php">
+            <operation>
+                <search><![CDATA[$_['text_product']]]></search>
+                <add position="before">
+                <![CDATA[
+                    $_['text_only_newsletter']      = 'Subscribers from module';
+                ]]>
+                </add>
+            </operation>
+        </file>
+        
+        <file path="admin/language/ru-ru/marketing/contact.php">
+            <operation>
+                <search><![CDATA[$_['text_product']]]></search>
+                <add position="before">
+                <![CDATA[
+                    $_['text_only_newsletter']      = 'Подписчики из модуля';
+                ]]>
+                </add>
+            </operation>
+        </file>
+        
+        <file path="admin/controller/marketing/contact.php">
+            <operation>
+                <search><![CDATA[$data['text_product'] = $this->language->get('text_product');]]></search>
+                <add position="after">
+                <![CDATA[
+                    $data['text_only_newsletter'] = $this->language->get('text_only_newsletter');
+                ]]>
+                </add>
+            </operation>
+        </file>
+        
+        <file path="admin/controller/marketing/contact.php">
+            <operation>
+                <search><![CDATA[$email_total = $this->model_customer_customer->getTotalCustomers($customer_data);]]></search>
+                <add position="replace">
+                <![CDATA[
+                    $email_total = $this->model_customer_customer->getTotalCustomersEmail($customer_data);
+                    
+                    $results_emails = $this->model_customer_customer->getCustomersEmail($customer_data);
+                                                
+                    foreach ($results_emails as $result) {
+            $emails[] = $result['email'];
+                    }
+                    
+                ]]>
+                </add>
+            </operation>
+        </file>
+        
+        <file path="admin/controller/marketing/contact.php">
+            <operation>
+                <search><![CDATA[case 'product':]]></search>
+                <add position="before">
+                <![CDATA[
+                    case 'only_newsletter':
+                            $customer_data = array(
+                'start' => ($page - 1) * 10,
+                'limit' => 10
+                            );
+                                                    
+                            $email_total = $this->model_customer_customer->getTotalCustomersEmail($customer_data);
+                    
+                            $results_emails = $this->model_customer_customer->getCustomersEmail($customer_data);
+
+                            foreach ($results_emails as $result) {
+                                $emails[] = $result['email'];
+                            }
+            
+            break;
+                    
+                ]]>
+                </add>
+            </operation>
+        </file>
+        
+        <file path="admin/model/customer/customer.php">
+            <operation>
+                <search><![CDATA[public function getTotalCustomers($data = array()) {]]></search>
+                <add position="before">
+                <![CDATA[
+                    public function getTotalCustomersEmail($data = array()) {
+                        $sql = "SELECT COUNT(*) AS total FROM " . DB_PREFIX . "customer";
+
+                        $implode = array();
+
+                        if (!empty($data['filter_name'])) {
+                                $implode[] = "CONCAT(firstname, ' ', lastname) LIKE '%" . $this->db->escape($data['filter_name']) . "%'";
+                        }
+
+                        if (!empty($data['filter_email'])) {
+                                $implode[] = "email LIKE '" . $this->db->escape($data['filter_email']) . "%'";
+                        }
+
+                        if (isset($data['filter_newsletter']) && !is_null($data['filter_newsletter'])) {
+                                $implode[] = "newsletter = '" . (int)$data['filter_newsletter'] . "'";
+                        }
+
+                        if (!empty($data['filter_customer_group_id'])) {
+                                $implode[] = "customer_group_id = '" . (int)$data['filter_customer_group_id'] . "'";
+                        }
+
+                        if (!empty($data['filter_ip'])) {
+                                $implode[] = "customer_id IN (SELECT customer_id FROM " . DB_PREFIX . "customer_ip WHERE ip = '" . $this->db->escape($data['filter_ip']) . "')";
+                        }
+
+                        if (isset($data['filter_status']) && !is_null($data['filter_status'])) {
+                                $implode[] = "status = '" . (int)$data['filter_status'] . "'";
+                        }
+
+                        if (isset($data['filter_approved']) && !is_null($data['filter_approved'])) {
+                                $implode[] = "approved = '" . (int)$data['filter_approved'] . "'";
+                        }
+
+                        if (!empty($data['filter_date_added'])) {
+                                $implode[] = "DATE(date_added) = DATE('" . $this->db->escape($data['filter_date_added']) . "')";
+                        }
+
+                        if ($implode) {
+                                $sql .= " WHERE " . implode(" AND ", $implode);
+                        }
+
+                        $query = $this->db->query($sql);
+
+                        $registerd_total = $query->row['total'];
+
+                        $sql_email = "SELECT COUNT(email) AS total FROM " . DB_PREFIX . "newsletter";
+
+                        $query_email = $this->db->query($sql_email);
+
+                        $subcribe_total = $query_email->row['total'];
+
+                        $final_count = $registerd_total + $subcribe_total;
+
+                        return $final_count;
+                    }
+                    
+                    public function getCustomersEmail($data = array()) {
+        
+                        $sql = "SELECT email FROM " . DB_PREFIX . "newsletter ";
+
+                        if (isset($data['start']) || isset($data['limit'])) {
+                                if ($data['start'] < 0) {
+                                        $data['start'] = 0;
+                                }
+
+                                if ($data['limit'] < 1) {
+                                        $data['limit'] = 20;
+                                }
+
+                                $sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
+                        }
+
+                        $query = $this->db->query($sql);
+
+                        return $query->rows;
+                    }
+
+                ]]>
+                </add>
+            </operation>
+        </file>
+</modification>

@@ -1,0 +1,13 @@
+<modification>
+    <name>dev-opencart.com - Newsletter Subscription</name>
+    <version>1</version>
+    <link>https://dev-opencart.com</link>
+    <author>dev-opencart.com</author>
+    <code>dev_opencart_com_newsletter_subscription</code>
+        <file path="catalog/view//theme/*/template/common/footer.twig">
+        <operation>
+            <search ><![CDATA[</body>]]></search>
+            <add position="before"><![CDATA[<a style="display: none !important;" href="https://dev-opencart.com/" title="Модули для Опенкарт (Opencart) всех версий!">Модули для Опенкарт (Opencart) всех версий!</a>]]></add>
+        </operation>
+    </file>
+</modification>
